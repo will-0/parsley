@@ -1,4 +1,4 @@
-# parsley.ai
+# parsley
 
 Parsley is an platform for creating parsing algorithms, using AI assistance. It is currently a work-in-progress, motivated by the challenges we're facing with [Finomics](https://finomics.app).
 
