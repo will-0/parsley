@@ -1,4 +1,4 @@
-# parsley
+# parsley 🌿
 
 Parsley is an platform for creating parsing algorithms, using AI assistance. It is currently a work-in-progress, motivated by the challenges we're facing with [Finomics](https://finomics.app).
 
@@ -31,4 +31,4 @@ Please feel free to get in touch if you would like to get involved. I will respo
 
 ## Final notes
 
-I know it would make more sense to call this 'parsely' or 'parse-ly'. I just like parsley🌿.
+I know it would make more sense to call this 'parsely' or 'parse-ly'. I just like parsley.
