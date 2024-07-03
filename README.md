@@ -4,7 +4,13 @@ Parsley is an platform for creating parsing algorithms, using AI assistance. It 
 
 ## Guiding Principles
 
-Parsley should strive to employ best practices, as defined by the highest level of evidence available.
+Parsley should strive to employ best practices, as defined by the highest level of evidence available:
+
+- Utilize widely accepted terminologies / ontologies
+- Propose most commonly accepted formats (e.g. suggest .ical for events)
+- Write using coding best-practices
+
+Parsley is also based on the idea that we can use expensive code resources once, to minimize their use in subsequent calls. The money/energy for 10 minutes of a powerful LLM put to good use in the design phase, could save hours of developer time and significant compute resources if multiple documents are to be parsed.
 
 ## Design
 
