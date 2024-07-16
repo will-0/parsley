@@ -1,26 +1,27 @@
 import './App.css'
-import { useSelector } from 'react-redux'
-import { ContentSelectors, appContent } from '@state/content'
-import { useExampleTodoQuery } from '@state/api'
+import { useExampleQueryQuery } from '@state/api'
 import { ErrorBoundary } from 'react-error-boundary'
 
 function App() {
 
-  const content = useSelector(ContentSelectors.selectContent) as appContent
   const {
-    data: todo,
+    data,
+    isLoading,
     isError,
     isSuccess
-   } = useExampleTodoQuery()
+   } = useExampleQueryQuery()
 
 
   return (
     <>
-      {content.data}
-      <div>
-        Todo:&nbsp;
+      <div> 
         <ErrorBoundary fallback={<div>Issue parsing</div>}>
-          {isSuccess ? todo.id : isError ? 'Error' : '...'}
+        {
+          isLoading ?
+            'Loading...' :
+            isError ? 'Error'
+            : isSuccess && data ? `Message: ${data.message}` : 'hmmm... something is wrong here'
+        }
         </ErrorBoundary>
       </div>
 

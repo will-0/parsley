@@ -1,6 +1,6 @@
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { TodoType } from './types'
+import { BaseType } from './types'
 
 // Define our single API slice object
 export const apiSlice = createApi({
@@ -17,13 +17,13 @@ export const apiSlice = createApi({
     // The "endpoints" represent operations and requests for this server
     endpoints: builder => ({
 
-      exampleTodo: builder.query<TodoType, void>({
-        query: () => 'https://jsonplaceholder.typicode.com/todos/1'
+      exampleQuery: builder.query<BaseType, void>({
+        query: () => '/'
       })
     })
   })
   
   // Export the auto-generated hook for the `getPosts` query endpoint
-  export const { useExampleTodoQuery } = apiSlice
+  export const { useExampleQueryQuery } = apiSlice
 
   export default apiSlice
