@@ -17,13 +17,14 @@ export const apiSlice = createApi({
     // The "endpoints" represent operations and requests for this server
     endpoints: builder => ({
 
-      exampleQuery: builder.query<BaseType, void>({
-        query: () => '/'
-      })
+      listFiles: builder.query<string[], void>({
+        query: () => '/files'
+      }),
+      
     })
   })
   
   // Export the auto-generated hook for the `getPosts` query endpoint
-  export const { useExampleQueryQuery } = apiSlice
+  export const { useListFilesQuery } = apiSlice
 
   export default apiSlice
